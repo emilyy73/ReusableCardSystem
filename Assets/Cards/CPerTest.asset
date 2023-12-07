@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64b0f3b4bba0a18498772ab3b8ef975a, type: 3}
   m_Name: CPerTest
   m_EditorClassIdentifier: 
-  name: Grrr
-  description: Goes the Schnee
+  name: this is a name
+  description: this is a description
   artwork: {fileID: 0}
-  manaCost: 5
+  cost: 8
   attack: 2
-  healith: 2
+  health: 2
