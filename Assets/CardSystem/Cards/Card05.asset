@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 64b0f3b4bba0a18498772ab3b8ef975a, type: 3}
-  m_Name: CPerTest
+  m_Name: Card05
   m_EditorClassIdentifier: 
-  name: this is a name
-  description: this is a description
+  name: Card05
+  description: Description05
   artwork: {fileID: 0}
-  cost: 8
-  attack: 2
-  health: 2
+  cost: 0
+  attack: 1
+  health: 1

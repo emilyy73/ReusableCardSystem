@@ -26,6 +26,11 @@ public class CardDisplay : MonoBehaviour
     private TMP_Text healthObject;
     private TMP_Text costObject;
 
+    public bool hasBeenPlayed;
+    public int handIndex;
+    private GameManager gm;
+    private int moveUp = 15;
+
     private void Start()
     {
         name = card.name;
@@ -45,5 +50,24 @@ public class CardDisplay : MonoBehaviour
         attackObject.text = "ATK: " + attack.ToString();
         healthObject.text = "HP: " + health.ToString();
         costObject.text = cost.ToString();
+
+        gm = FindObjectOfType<GameManager>();
+    }
+
+    private void OnMouseDown()
+    {
+        if (hasBeenPlayed == false)
+        {
+            transform.position += Vector3.up * moveUp;
+            hasBeenPlayed = true;
+            gm.availableCardSlots[handIndex] = true;
+            Invoke("MoveToDiscardPile", 2f);
+        }
+    }
+
+    void MoveToDiscardPile()
+    {
+        gm.discardPile.Add(this);
+        this.gameObject.SetActive(false);
     }
 }
