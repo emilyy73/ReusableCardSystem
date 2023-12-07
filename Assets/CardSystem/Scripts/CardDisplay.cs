@@ -33,7 +33,7 @@ public class CardDisplay : MonoBehaviour
 
     private void Start()
     {
-        name = card.name;
+        name = card.Name;
         description = card.Description;
         attack = card.Attack;
         health = card.Health;
